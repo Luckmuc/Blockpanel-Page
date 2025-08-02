@@ -1,100 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blockpanel Page</title>
-  <link rel="icon" type="image/x-icon" href="project-icon.ico" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="panel-bg"></div>
-  <div class="panel-layout">
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <div class="sidebar-logo-area">
-          <img src="project-icon.ico" alt="Blockpanel Icon" class="logo" />
-        </div>
-        <nav class="sidebar-nav top-nav">
-          <a href="#home" class="sidebar-link" title="Home">
-            <span class="icon">🏠</span>
-            <span class="nav-label">Home</span>
-          </a>
-          <a href="#features" class="sidebar-link" title="Features">
-            <span class="icon">⚙️</span>
-            <span class="nav-label">Features</span>
-          </a>
-          <a href="#tutorial" class="sidebar-link" title="Tutorial">
-            <span class="icon">📖</span>
-            <span class="nav-label">Tutorial</span>
-          </a>
-        </nav>
-      </div>
-    </aside>
-    <main class="panel-main">
-      <section id="home" class="hero">
-        <h1><span class="glow">Blockpanel</span></h1>
-        <p class="subtitle">The <span class="high-tech">modern</span> server management for Minecraft – now as a presentation & tutorial site!</p>
-        <a href="#tutorial" class="cta animated-btn">Go to Tutorial</a>
-      </section>
-      <section id="features">
-        <h2>Features</h2>
-        <ul class="features-list">
-          <li>Intuitive user interface in a modern dark design</li>
-          <li>Server management, logs, plugins & more</li>
-          <li>Secure authentication</li>
-          <li>Responsive for desktop & mobile</li>
-        </ul>
-      </section>
-      <section id="tutorial">
-        <h2>Tutorial</h2>
-        <ol class="tutorial-steps">
-          <li>Download & install the project</li>
-          <li>Start backend & frontend</li>
-          <li>Connect with your own Minecraft server</li>
-          <li>Control your server easily via the panel</li>
-        </ol>
-      </section>
-      <section id="installation">
-        <h2>Installation Tutorial</h2>
-        <ol class="tutorial-steps">
-          <li>
-            <strong>Clone repository:</strong><br>
-            <code>git clone https://github.com/Luckmuc/Blockpanel.git</code>
-          </li>
-          <li>
-            <strong>Change directory:</strong><br>
-            <code>cd Blockpanel</code>
-          </li>
-          <li>
-            <strong>Start with Docker:</strong><br>
-            <code>docker-compose up --build</code>
-          </li>
-          <li>
-            <strong>Visit in browser:</strong><br>
-            <code>http://localhost:1105</code>
-          </li>
-        </ol>
-      </section>
-    </main>
-  </div>
-  <footer>
-    <p>&copy; 2025 Blockpanel – Präsentations- & Tutorial-Seite</p>
-  </footer>
-  <script>
-    // Button Animation
-    document.querySelectorAll('.animated-btn').forEach(btn => {
-      btn.addEventListener('mousemove', e => {
-        const rect = btn.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        btn.style.setProperty('--x', x + 'px');
-        btn.style.setProperty('--y', y + 'px');
-      });
-    });
-  </script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blockpanel Präsentation</title>
+    <meta name="description" content="Blockpanel Präsentationsseite für das Minecraft Server Panel" />
+    <link rel="icon" type="image/png" href="/project-icon-bg.png" />
+  </head>
+  <body style="margin:0;">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>

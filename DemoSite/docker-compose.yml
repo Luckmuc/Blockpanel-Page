@@ -1,0 +1,8 @@
+services:
+  demosite:
+    build: .
+    image: blockpanel-demosite:latest
+    container_name: blockpanel-demosite
+    ports:
+      - "80:80"
+    restart: unless-stopped
